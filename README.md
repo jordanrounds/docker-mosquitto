@@ -11,4 +11,5 @@ Run the mosquitto-setup.sh script. This will create directories named config, lo
 If you want to add additional users, delete, or change passwords. You can run the mosquitto-user.sh script, and it will handle running the mosquitto_passwd commands in the container and restarting the mosquitto process.
 
 ## Acknowledgments
+Thanks to thelebster's example to get me started.
 https://github.com/thelebster/example-mosquitto-simple-auth-docker
