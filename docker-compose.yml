@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mosquitto:
+    build: .
+    container_name: "mosquitto"
+    environment:
+      - MOSQUITTO_USERNAME=${MOSQUITTO_USERNAME}
+      - MOSQUITTO_PASSWORD=${MOSQUITTO_PASSWORD}
+    image: "eclipse-mosquitto:auth"
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - "./config:/mosquitto/config"
+      - "./data:/mosquitto/data"
+      - "./log:/mosquitto/log"
